@@ -12,9 +12,9 @@ int main() {
 
         //Antes de acessar esses valores vamos criar um prompt para guiar o usuário
         printf("Digite o número do aluno para mostrar as notas...\n");
-        printf("Aluno 0, digite 0\n");
-        printf("Aluno 1, digite 1\n");
-        printf("Aluno 2, digite 2\n");
+        printf("Para o aluno 0, digite 0\n");
+        printf("Para o aluno 1, digite 1\n");
+        printf("Para o aluno 2, digite 2\n");
               
         scanf("%d", &index);
 
