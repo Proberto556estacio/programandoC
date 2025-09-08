@@ -4,7 +4,7 @@ int main() {
 
     int index;
 
-     char * nomeAlunos = {
+     char * nomeAlunos [3] [3] = {
             {"Aluno 0", "Pt: 30", "Mat: 90"},
             {"Aluno 1", "Pt: 60", "Mat: 60"},
             {"Aluno 2", "Pt: 90", "Mat: 30"}
@@ -15,12 +15,10 @@ int main() {
         printf("Aluno 0, digite 0\n");
         printf("Aluno 1, digite 1\n");
         printf("Aluno 2, digite 2\n");
+              
+        scanf("%d", &index);
 
-        printf("Voce escolheu - Aluno 1\n");
-        
-        scanf("%d, index");
-
-        printf("As notas do %s são: %s, %s...\n", nomeAlunos[index][0], nomesAlunos[index][1], nomesAlunos[index][2]);
+        printf("As notas do %s são: %s, %s...\n", nomeAlunos[index][0], nomeAlunos[index][1], nomeAlunos[index][2]);
 
 
 
