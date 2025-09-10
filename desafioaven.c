@@ -1,43 +1,41 @@
 #include <stdio.h>
 
+#define LINHAS 10
+#define COLUNAS 10
 
 // Desafio Batalha Naval - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
-    // Nível Novato - Posicionamento dos Navios
-    // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
-    // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
-    // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
+    
 
     //Declaração a matriz de números inteiros (10 x 10) inicializando com 0.
 
-    int tabuleiro [10] [10] = {0};    
-
-     
+    int tabuleiro [LINHAS] [COLUNAS] = {0};    
+    
+    //Mostra na tela informação "Posicionamento dos navios"
     printf("\nPosicionamento dos Navios\n");
 
-        //Definindo posição Navio1 Horizontal - linha 2 fixa, coluna 3 a 5
+        //Navio 1 - Posição horizontal - linha 2 fixa, coluna 3 a 5
         for (int j = 3; j <= 5; j++){
             tabuleiro [2] [j] = 3;
             printf("Návio 1 na horizontal: linha %d, coluna %d \n", 2, j);
         } 
 
-        //Definindo posição Navio2 Vertical - coluna 7 fixa, linha 4 a 6     
+        //Navio 2 - Posição vertical - coluna 7 fixa, linha 4 a 6     
         for (int i = 4; i <= 6; i++) {
             tabuleiro [i] [7] = 3;
             printf("Navio 2 na vertical: linha %d, coluna %d \n", i, 7);
         }
 
-        
-        //Definindo posição Navio3 - Diagonal Principal     
+        //Navio 3 - Posição diagonal principal     
         for (int i = 3; i <= 5; i++) {
             tabuleiro [i] [i] = 3;
-            printf("Navio 3 na diagonal principal: linha %d, coluna %d \n, i, i");
+            printf("Navio 3 na diagonal principal: linha %d, coluna %d \n", i, i);
         }
         
-        //Definindo posição Navio4 - Diagonal Secundária
+        //Navio 4 - Posição diagonal secundária
         for (int i = 2; i <= 4; i++) {
             int j = 9 - i;
             tabuleiro [i] [j] = 3;
@@ -45,19 +43,22 @@ int main() {
         }
           
         
-        //Tabuleiro Definido - 0 representa "Água" e 3 representa partes dos "Navios"
+        //Definição Tabuleiro - (0) zero representa "Água" e (3) três representa partes dos "Navios"
         printf("\nTabuleiro Batalha Naval\n");
 
-        for (int i = 0; i < 10; i++)        //Definindo as linhas do tabuleiro
+        for (int i = 0; i < LINHAS; i++)        //Definindo as linhas do tabuleiro
         {                                   
-            for (int j = 0; j < 10; j++)    //Definindo as colunas do tabuleiro
+            for (int j = 0; j < COLUNAS; j++)    //Definindo as colunas do tabuleiro
             {
                 printf("%d ", tabuleiro [i] [j]);   
             }
             printf("\n");
         }
 
-
+    // Nível Novato - Posicionamento dos Navios
+    // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
+    // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
+    // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
 
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
